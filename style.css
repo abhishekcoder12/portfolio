@@ -61,6 +61,7 @@ h2 {
   margin-bottom: 15px;
   border-bottom: 2px solid #00bcd4;
   display: inline-block;
+  padding-bottom: 5px;
 }
 
 section {
@@ -83,15 +84,36 @@ section {
   font-weight: bold;
 }
 
-a {
-  color: #007acc;
+/* Projects Section */
+#projects ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+#projects li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Style for project links */
+#projects a {
+  display: inline-block;
+  margin-left: 10px;
+  background: #00bcd4;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+#projects a:hover {
+  background: #0097a7;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
+/* Resume Button */
 .btn {
   display: inline-block;
   background: #007acc;
@@ -107,10 +129,43 @@ a:hover {
   background: #005f99;
 }
 
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 footer {
   background: #1f1f1f;
   color: #ccc;
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  #projects a {
+    display: block;
+    margin: 5px 0 0 0;
+  }
 }
